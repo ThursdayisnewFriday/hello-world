@@ -1,2 +1,2 @@
 # hello-world
-Just for learn bitch
+We'll be fine be safe and positive
