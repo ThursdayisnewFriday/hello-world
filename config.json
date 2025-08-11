@@ -1,0 +1,23 @@
+{
+  "jamf": {
+    "url": "https://your-jamf-server.com",
+    "username": "your-api-username",
+    "password": "your-api-password"
+  },
+  "email": {
+    "smtp_server": "smtp.gmail.com",
+    "smtp_port": 587,
+    "username": "your-email@company.com",
+    "password": "your-app-password",
+    "sender_email": "it-admin@company.com"
+  },
+  "web_interface": {
+    "url": "http://your-server:5000",
+    "secret_key": "your-secret-key-here"
+  },
+  "settings": {
+    "notification_grace_period_days": 7,
+    "check_interval_hours": 24,
+    "smart_group_name": "License Recovery - 1년 미체크인 디바이스"
+  }
+}
