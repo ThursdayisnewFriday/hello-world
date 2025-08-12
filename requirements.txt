@@ -1,0 +1,9 @@
+# Jamf Pro API 스크립트 의존성 패키지
+# HTTP 요청을 위한 라이브러리
+requests>=2.31.0
+
+# 타입 힌팅 지원 (Python 3.8 이하에서 필요)
+typing-extensions>=4.0.0
+
+# 날짜/시간 처리를 위한 라이브러리 (선택사항)
+python-dateutil>=2.8.2
