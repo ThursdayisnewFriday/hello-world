@@ -1,0 +1,30 @@
+# Jamf Pro instance configuration
+jamf:
+  base_url: https://your-jamf-instance.jamfcloud.com
+  # Prefer OAuth service account (Client Credentials)
+  auth: oauth
+  client_id: your_client_id
+  client_secret: your_client_secret
+  # Alternatively, you can use a classic user for token endpoint /api/auth/tokens
+  # auth: user
+  # username: api_user
+  # password: api_password
+
+# Business logic
+policy:
+  days_inactive: 60
+  dry_run: true
+  quarantine_static_group_id: 1234  # numeric ID of a Static Computer Group for inactive Macs
+
+# Mac App Store (VPP) apps to reclaim licenses from by excluding inactive devices from scope
+# Find app IDs in Jamf Pro by opening the app and checking the URL path ending (e.g., macapplications.html?id=5678)
+mac_app_store_apps:
+  - id: 5678
+    name: Example App One
+  - id: 9012
+    name: Example App Two
+
+# Optional notification export (no outbound email/Slack here; produces CSV lists for your use)
+reporting:
+  output_dir: ./output
+  export_inactive_csv: true
